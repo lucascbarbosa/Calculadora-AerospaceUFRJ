@@ -1,6 +1,3 @@
-import math
-
-
 class Calculator(object): #Class calculator 
     def __init__(self): #Stores all attributes of class
         pass 
@@ -82,11 +79,11 @@ class Calculator(object): #Class calculator
 if __name__ == "__main__":
     calc = Calculator()
     print("Welcome to the Awesome Calculator! Here are the instructions:\nType [number1] [operator] [number2 (if not needed type -)]\n The lists of operators are:\n+: sum\n-: subtraction\n*: multiplication\n/:division\n%: remainder\n^:potentiation\n~: radication.\n!: the [number1]-th fibonacci number\n")
-    will = True
+    will = True # Boolean variable to determine if the user wishes to continue using calculator
     while will:
         a,op,b = input("Please insert desired operation: ").split()
-        a = int(a)
-        try:
+        a = int(a) #the numbers must be int
+        try: #If [number2] is not null
             b = int(b)
             if op == "+":
                 answer = calc.add(a,b)
